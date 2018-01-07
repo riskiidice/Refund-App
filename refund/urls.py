@@ -16,8 +16,12 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from . import views
+from .views import (
+    refund_create,
+    refund_detail,
+)
 
 urlpatterns = [
-    url(r'^$', views.index),
+    url(r'^$', refund_create),
+    url(r'^(?P<id>\d+)/detail/$', refund_detail ,name="detail"),
 ]

@@ -5,6 +5,10 @@
     <title>{{ title }} | ETCTUTOR</title>
   </head>
   <body>
-
+    <form method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit" name="Submit" value="Submit">
+    </form>
   </body>
 </html>
