@@ -18,12 +18,12 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'd0ee2w4_+p%1mgcaylw!um8u2_4fpmxse4$u83y20%eqxtpoe7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = ''
 
 ALLOWED_HOSTS = []
 
