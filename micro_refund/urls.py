@@ -19,7 +19,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    url(r'^$', include('refund.urls', namespace="refund") ),
     url(r'^refund/', include('refund.urls', namespace="refund") ),
     url(r'^admin/', admin.site.urls),
 ]
