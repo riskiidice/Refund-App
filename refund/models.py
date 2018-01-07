@@ -5,7 +5,6 @@ from django.core.urlresolvers import reverse
 
 # Create your models here.
 class Refund(models.Model):
-    title = models.CharField(max_length=20)
     name = models.CharField(max_length=100)
     surname = models.CharField(max_length=100)
     mobile = models.CharField(max_length=10, default='')
@@ -18,10 +17,10 @@ class Refund(models.Model):
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
 
     def __unicode__(self):
-        return self.title+'  '+self.name+' '+self.surname
+        return self.name+' '+self.surname
 
     def __str__(self):
-        return self.title+'  '+self.name+' '+self.surname
+        return self.name+' '+self.surname
 
     def get_absolute_url(self):
         return reverse("refund:detail", kwargs={ "id" :self.id})
