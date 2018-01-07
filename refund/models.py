@@ -7,6 +7,7 @@ from django.core.urlresolvers import reverse
 class Refund(models.Model):
     name = models.CharField(max_length=100)
     surname = models.CharField(max_length=100)
+    student_id = models.CharField(max_length=3, default='')
     mobile = models.CharField(max_length=10, default='')
     account = models.CharField(max_length=100)
     account_name = models.CharField(max_length=100, default='')
