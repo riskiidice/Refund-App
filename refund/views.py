@@ -9,6 +9,7 @@ from .models import Refund
 # from .services import THSMS
 # Create your views here.
 def refund_create(request):
+    print request.POST
     form = RefundForm(request.POST or None)
     if form.is_valid():
         instance = form.save(commit=False)
